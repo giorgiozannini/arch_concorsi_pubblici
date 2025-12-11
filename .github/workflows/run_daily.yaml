@@ -2,7 +2,7 @@ name: Run Daily Python Script
 
 on:
   schedule:
-    - cron: '0 16 * * *'  # Every day at 17:00 UTC
+    - cron: '0 15 * * *'  # Every day at 17:00 UTC
   workflow_dispatch:      # Optional: allows manual triggering
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-        run: python derm_concorsi_pubblici.py
+        run: python arch_concorsi_pubblici.py
         env:
           TOKEN: ${{ secrets.TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
