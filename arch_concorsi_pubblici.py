@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 import os 
 import time
+import random
 
 n_attempts = 3
 for attempt in range(n_attempts):
@@ -77,7 +78,7 @@ for attempt in range(n_attempts):
     except Exception as e:
         print(e)
         print(ente_name, scadenza_date)
-        time.sleep(10)
+        time.sleep(100 * random.random())
         continue
 
     else:
