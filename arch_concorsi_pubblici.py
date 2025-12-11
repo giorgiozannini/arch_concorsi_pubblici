@@ -51,7 +51,7 @@ for attempt in range(n_attempts):
                     ente_link = f"<a href='{ente_link}'>pagina ente</a>" if ente_link else "Pagina ente non trovata"
 
                     message = f"""
-<b>Nuovo concorso di Dermatologia!!</b>
+<b>Nuovo concorso di Archeologia!!!</b>
 
 > <b>pagina</b>: {concorsi_url}
 > <b>ente</b>: {ente_name}
