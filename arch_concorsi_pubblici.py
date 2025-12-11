@@ -9,7 +9,7 @@ for attempt in range(n_attempts):
     print("Attempt n. ", attempt+1)
 
     try:
-        url = "https://www.concorsipubblici.com/search?keys=dermatologia"
+        url = "https://www.concorsipubblici.com/search?keys=archeologia"
         page = requests.get(url)
         
         print("Response:", page.status_code)
@@ -46,8 +46,6 @@ for attempt in range(n_attempts):
                     # Extract 'description'
                     description = concorso.select_one("div.contest-footer").get_text().strip().replace("\n", "")
 
-                    if not 'derm' in description:
-                        continue
 
                     concorsi_url = f"<a href='{url}'>pagina concorsi</a>"
                     ente_link = f"<a href='{ente_link}'>pagina ente</a>" if ente_link else "Pagina ente non trovata"
